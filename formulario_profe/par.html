@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="nombre" placeholder="nombre" required>
+    <br>
+    <button onclick="mostra()">mostrar</button>
+    <input type="color">
+    <br>
+    <input type="range">
+    <br>
+    <input type="date">
+    <br>
+    <input type="time">
+    <br>
+    <input type="month">
+
+    <input type="submit" name="" id="">
+
+
+
+    <script>
+      
+
+        function mostra(){
+            const x = document.getElementById("nombre").value;
+            alert(`el nombre ingresado es ${x}`)
+            document.getElementById("nombre").value="";
+
+           
+
+        }
+
+      //  var x = prompt("ingresa un numero par o inpar")
+        //if(x % 2 == 0){
+          //  alert(x +"el numero es par")
+        //}else{
+          //  alert(x + "el numero es inpar")
+        //}
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="col order-5">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">año</th>
+                    <th scope="col">categoaria</th>
+                    <th scope="col">opcion</th>
+                </tr>
+                </thead>
+                <tbody id="add">
+                
+                </tbody>
+            </table>
+            
+        </div>
+        <input id="nombre" placeholder="address" required>
+        <div class="col order-1">
+            <!--hacemos el formulario-->
+            <div class="mb-3">
+                <label >años</label> 
+                <select  id="mySelect">
+                    <option value="" disabled="" selected="">Selecciona una opción</option>
+                    <option value="año1">año 1</option>
+                    <option value="año2">año 2</option>
+                    <option value="año3">año 3</option>
+                    <option value="año4">año 4</option>
+                </select>
+
+            </div>
+            <div class="mb-3">
+                <label >categoria</label>
+                <select  id="categoria">
+                    <option value="" disabled="" selected="">Selecciona una opción</option>
+                    <option value="futbol">futbol</option>
+                    <option value="baskball">baskball</option>
+                    <option value="nba">nba</option>
+                    <option value="soccer">soccer</option>
+                </select>
+            </div>
+            <br>
+            <a href="#" onclick="addrow()" class="btn btn-primary">enviar datos</a>
+    
+        </div>
+        </div>
+    </div>
+
+
+    <script>
+        var row = "";
+        var filas = [];
+        function addrow() {
+            const x = document.getElementById('mySelect').value;
+            const q = document.getElementById('categoria').value;
+            const w = document.getElementById('nombre').value;
+
+
+            const add = document.getElementById('add');
+            row += `<tr>
+        <th scope="row">${mySelect.value}</th>
+        <td>${categoria.value}</td>
+        <td>${nombre.value}</td>
+       
+
+
+    </tr>`;
+            //filas.push(row);
+            add.innerHTML = row;
+        }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
